@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel='stylesheet' href='./styles/reset.css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+  <link rel='stylesheet' href='./styles/styles.css'>
+  <link rel="stylesheet" href="./styles/to-do.css">
+  <link rel="icon" href="img/favicon.png"> <!-- Favicon source: Tear-Off Calendar icon by Icons8 -->
+  <title>calendar</title>
+</head>
+
+<body>
+  <header>
+    <h1><a href='./index.html'> 🗓️ Calendar Site</a></h1>
+    <nav>
+      <ol>
+        <li><a href='./index.html'> Home</a></li>
+        <li><a href='./pages/about.html'>About</a></li>
+        <li><a href='./pages/history.html'>History</a></li>
+      </ol>
+    </nav>
+  </header>
+
+  <div class='combined'>
+    <aside>
+      <div class="container">
+        <div class="app">
+          <h2>TO DO LIST</h2>
+
+          <form class="todo-form">
+            <input type="text" placeholder="Add new task...">
+            <button type="submit">&plus;</button>
+          </form>
+          <ul></ul>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Modal source: https://www.w3schools.com/howto/howto_css_modals.asp -->
+    <section id='calendar' class='calendar'>
+
+      <!-- Calendar dropdown -->
+      <form id="month-dropdown" class="month-dropdown">
+        <fieldset>
+          <label for="select-month">Select a month:</label>
+          <select id="select-month"></select>
+          <input type="submit" value="Go to month" class="button">
+        </fieldset>
+      </form>
+
+      <!-- Add background image form -->
+      <form id="add-background" class="add-background">
+        <fieldset>
+          <label for="calendar-background">Add a calendar background:</label>
+          <input type="text" name="background" id="calendar-background" placeholder="paste image url" required>
+          <input type="submit" value="Add background" class="button">
+          <button id="remove-background-btn" type="button" class="button">Remove background</button>
+        </fieldset>
+      </form>
+      <div id="calendar-container"></div>
+
+      <!-- Modal -->
+      <div id="modal" class="modal">
+        <div class="modal-content">
+          <span id="close-button" class="close">&times;</span>
+          <div id="events-container"></div>
+          <form id="add-event-form">
+            <fieldset>
+              <legend>Add new event</legend>
+              <label for="event-title">
+                <span>Event title:</span>
+                <input type="text" name="eventTitle" id="event-title" maxLength="15" placeholder="Title" required>
+              </label>
+              <label for="times">
+                <span>Select a time:</span>
+                <select id="times"></select>
+              </label>
+              <label for="color">
+                <span>Pick an event color:</span>
+                <select id="colors"></select>
+              </label>
+              <input id="modal-submit" type="submit" value="Add event" class="button">
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </section>
+  </div>
+  <footer>
+    &copy Brandon, Kiengchay, Jaye, Josh
+  </footer>
+  <script src='./js/app.js'></script>
+  <script src='./js/modal.js'></script>
+  <script src="./js/background.js"></script>
+  <script src='./js/list.js'></script>
+</body>
+
+</html>

@@ -1,0 +1,331 @@
+body {
+  background-color: #f5f5f5;
+  font-family: 'Franklin Gothic Regular', Arial, sans-serif;
+}
+
+header {
+  align-items: center;
+  background-color: rgb(62,74,50);
+  display: flex;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  justify-content: space-between;
+  padding-left: 30px;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  color: #f5f5f5;
+}
+
+h1 {
+  font-size: 55px;
+  padding: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link,
+a:visited {
+  color: #f5f5f5;
+}
+
+nav ol {
+  display: flex;
+  justify-content: right;
+  font-size: 25px;
+  padding: 10px;
+}
+
+nav ol>li {
+  padding: 10px;
+  margin-right: 40px;
+  background-color: #d4a43b;
+  color: whitesmoke;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+nav a:link,
+nav a:visited {
+  color: black;
+  font-weight: 500;
+}
+
+nav li:hover {
+  background-color: #ae8631;
+}
+
+.calendar {
+  font-size: 20px;
+}
+
+.calendar h2 {
+  font-size: 35px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.786);
+  padding: 10px 20px;
+  width: 30%;
+  margin: auto auto;
+  border-radius: 5px;
+}
+
+.month-div {
+  background-color: #f5f5f5;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-top: 10px;
+  width: fit-content;
+  margin: 20px 20px;
+  border-radius: 10px;
+}
+
+table {
+  margin: 20px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.786);
+}
+
+td,
+th {
+  border: 1px solid black;
+  /* padding: 20px; */
+}
+
+.td-container,
+th {
+  padding: 20px;
+}
+
+td {
+  height: 7em;
+  width: 5em;
+  font-size: 20px;
+  vertical-align: bottom;
+  padding: 10px;
+}
+
+.td-container {
+  height: 150px;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  width: 100%;
+}
+
+.calendar-date,
+.button,
+.remove {
+  cursor: pointer;
+}
+ 
+ol>li {
+  padding: 10px;
+  margin-right: 40px;
+  background-color: #d4a43b;
+  color: whitesmoke;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+aside h2 {
+  text-align: center;
+  font-size: 35px;
+  margin: 10px;
+  /* font-family: 'Courier New', Courier, monospace; */
+}
+
+.month-dropdown,
+.add-background {
+  margin: 10px 0;
+}
+
+.combined {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 15px;
+  max-width: 100%;
+}
+
+/* modal css source: https://www.w3schools.com/howto/howto_css_modals.asp */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+  border-radius: 10px;
+}
+
+/* The modal close button */
+.close {
+  color: #698191;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#add-event-form {
+  background-color: #a8bbc8;
+  border-radius: 5px;
+  padding: 1px;
+  margin-top: 5px;
+  border: 1px solid black;
+}
+
+.modal fieldset {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.modal fieldset * {
+  margin: 5px;
+}
+
+.modal legend {
+  font-size: 1.5rem;
+  padding-bottom: 10px;
+  font-weight: 600;
+}
+
+.modal label input,
+.modal select {
+  padding: 5px;
+  border-radius: 3px;
+}
+
+#modal-submit {
+  width: fit-content;
+  background-color: #698191;
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+  border: none;
+  margin-left: 20%;
+}
+
+#modal-submit:hover {
+  background-color: #546875;
+}
+
+.added-events {
+  position: relative;
+  font-size: 15px;
+  padding-top: 3px;
+  background-color: #d4a43b;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 3px;
+  /* color: whitesmoke; */
+  color: black;
+}
+
+.added-events p {
+  padding: 5px;
+}
+
+.modal .added-events {
+  width: 80%;
+}
+
+.modal .remove {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 5px;
+}
+
+footer {
+  text-align: center;
+  font-size: 20px;
+  padding: 20px;
+  background-color: rgb(62,74,50);
+  color: white;
+}
+
+/* ---------------------- HISTORY-------------------- */
+
+.history h2 {
+  text-align: center;
+  font-size: 35px;
+  padding: 10px;
+}
+
+.history p {
+  padding: 10px;
+  font-size: 20px;
+  text-indent: 45px;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.history img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  max-width: 720px;
+
+}
+/* --------------------ABOUT HTML--------------------- */
+
+.developers {
+padding: 30px;
+
+}
+
+.developers  img {
+ 
+  display: inline;
+  height: 400px;
+  width: 400px;
+  padding: 10px;
+  padding-top: 20px;
+}
+
+.developers h2 {
+  font-size: 30px;
+}
+
+.developers p {
+font-size: 20px;
+}
+
+.brandon-float {
+  display: flex;
+align-items: center;
+text-align: center;
+
+}
+
+.brandon-text {
+  background-color: #a8bbc8;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 20px;
+  max-width: 700px;
+}
+
