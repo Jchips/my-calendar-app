@@ -2,7 +2,7 @@
 
 Developers:
 
-- Jelani (Jaye) Rhinehart
+- J. Rose
 - Brandon Ruiz
 - Kiengchay Gomez
 - Joshua Hahn
@@ -15,6 +15,7 @@ Versions:
 - 2.0.0 Added To-Do Checklist functionality
 - 3.0.0 Ability to add/remove events in the Modal
 - 4.0.0 Ability to upload user backgrounds
+- 5.0.0 Added scrollbar for days with multiple days, added event color option, sort events by time
 
 <https://trello.com/invite/b/WkbBEASY/ATTI35e1ccfcbc98083454b47bda3de3ddfa79AEA8B7/project-management-board>
 
